@@ -26,7 +26,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.nick11roberts.notesrs.MainActivity" />
         </activity>
-        <activity android:name=".UploadActivity"></activity>
+        <activity
+            android:name=".UploadActivity"
+            android:label="@string/title_activity_upload"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.nick11roberts.notesrs.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
