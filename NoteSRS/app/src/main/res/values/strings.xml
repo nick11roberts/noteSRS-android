@@ -63,4 +63,7 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="uploadButtonText">Upload</string>
     <string name="correctTextButtonText">Correct Text</string>
+    <string name="correctTextHint">Not serious text</string>
+    <string name="uploadWordHint">Serious word</string>
+    <string name="uploadCorrectionHint">Not serious correction</string>
 </resources>
