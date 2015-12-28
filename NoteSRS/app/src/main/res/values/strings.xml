@@ -4,6 +4,9 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_upload">New Correction</string>
 
+    <!-- Strings related to Errors -->
+    <string name="invalid_input">New additions to the autocucumber list cannot be empty or contain spaces</string>
+
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
@@ -61,9 +64,9 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="uploadButtonText">Upload</string>
-    <string name="correctTextButtonText">Correct Text</string>
-    <string name="correctTextHint">Not serious text</string>
-    <string name="uploadWordHint">Serious word</string>
-    <string name="uploadCorrectionHint">Not serious correction</string>
+    <string name="upload_button_text">Upload</string>
+    <string name="correct_text_button_text">Correct Text</string>
+    <string name="correct_text_hint">Not serious text</string>
+    <string name="upload_word_hint">Serious word</string>
+    <string name="upload_correction_hint">Not serious correction</string>
 </resources>

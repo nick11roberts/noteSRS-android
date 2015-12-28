@@ -30,7 +30,7 @@
             android:capitalize="sentences"
             android:singleLine="true"
             android:elegantTextHeight="true"
-            android:hint="@string/uploadWordHint" />
+            android:hint="@string/upload_word_hint" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -56,14 +56,14 @@
             android:capitalize="sentences"
             android:elegantTextHeight="true"
             android:singleLine="true"
-            android:hint="@string/uploadCorrectionHint" />
+            android:hint="@string/upload_correction_hint" />
 
     </android.support.design.widget.TextInputLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/uploadButtonText"
+        android:text="@string/upload_button_text"
         android:id="@+id/uploadButton"
         android:layout_below="@+id/textInputLayout3"
         android:layout_alignParentRight="true"

@@ -10,8 +10,14 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    // XML elements that will be used
+    private EditText autoCucumberEditText;
+    private Button autoCucumberButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Now that the view is inflated, find the relevant elements in the XML
+        autoCucumberEditText = (EditText)findViewById(R.id.autoCucumberEditText);
+        autoCucumberButton = (Button)findViewById(R.id.autoCucumberButton);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -28,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(MainActivity.this, UploadActivity.class);
                 MainActivity.this.startActivity(myIntent);
 
+                /*
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                        */
             }
         });
     }
