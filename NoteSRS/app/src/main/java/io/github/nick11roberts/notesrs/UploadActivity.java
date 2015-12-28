@@ -29,6 +29,7 @@ public class UploadActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
                 // Check if not (string has spaces)
                 if((!newWordEditText.getText().toString().contains(" ")
                         && !newWordEditText.getText().toString().isEmpty())
@@ -37,19 +38,26 @@ public class UploadActivity extends AppCompatActivity {
 
                     // Call the API
 
-                }
+                    // Reset the EditTexts
+                    newWordEditText.getText().clear();
+                    newCorrectionEditText.getText().clear();
+                    newWordEditText.requestFocus();
 
-                if(newWordEditText.getText().toString().contains(" ")
-                        || newWordEditText.getText().toString().isEmpty()) {
+                } else {
 
-                    newWordEditText.setError(getResources().getString(R.string.invalid_input));
+                    if (newWordEditText.getText().toString().contains(" ")
+                            || newWordEditText.getText().toString().isEmpty()) {
 
-                }
+                        newWordEditText.setError(getResources().getString(R.string.invalid_input));
 
-                if(newCorrectionEditText.getText().toString().contains(" ")
-                        || newCorrectionEditText.getText().toString().isEmpty()) {
+                    }
 
-                    newCorrectionEditText.setError(getResources().getString(R.string.invalid_input));
+                    if (newCorrectionEditText.getText().toString().contains(" ")
+                            || newCorrectionEditText.getText().toString().isEmpty()) {
+
+                        newCorrectionEditText.setError(getResources().getString(R.string.invalid_input));
+
+                    }
 
                 }
 

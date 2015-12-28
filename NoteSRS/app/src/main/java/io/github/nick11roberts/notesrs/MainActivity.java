@@ -30,6 +30,32 @@ public class MainActivity extends AppCompatActivity {
         autoCucumberEditText = (EditText)findViewById(R.id.autoCucumberEditText);
         autoCucumberButton = (Button)findViewById(R.id.autoCucumberButton);
 
+        // Give the button an OnClickListener with an overridden onClick method
+        autoCucumberButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                // Check if not (string has spaces)
+                if(!autoCucumberEditText.getText().toString().isEmpty()) {
+
+                    // Call the API
+
+                    // Reset the EditText
+                    autoCucumberEditText.getText().clear();
+                    autoCucumberEditText.requestFocus();
+
+                } else {
+
+                    // Notify the user that they must have some input to correct
+                    autoCucumberEditText.setError(getResources().getString(R.string.empty_input));
+
+                }
+
+            }
+
+        });
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,6 +5,7 @@
     <string name="title_activity_upload">New Correction</string>
 
     <!-- Strings related to Errors -->
+    <string name="empty_input">Correction cannot be empty</string>
     <string name="invalid_input">New additions to the autocucumber list cannot be empty or contain spaces</string>
 
     <!-- Strings related to Settings -->
