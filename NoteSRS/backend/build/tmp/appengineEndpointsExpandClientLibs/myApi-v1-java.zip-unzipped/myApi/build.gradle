@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 
-group = 'io.github.nick11roberts.notesrs.backend'
+group = 'io.github.nick11roberts'
 archivesBaseName = 'myApi'
 version = 'v1-1.21.0-SNAPSHOT'
 

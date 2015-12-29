@@ -14,4 +14,8 @@
     <string name="correct_text_hint">Not serious text</string>
     <string name="upload_word_hint">Serious word</string>
     <string name="upload_correction_hint">Not serious correction</string>
+
+    <!-- Strings related to notifications -->
+    <string name="text_corrected_notification">Your not serious text has been corrected</string>
+    <string name="text_uploaded_notification_mid"> -> </string>
 </resources>
