@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements CorrectAsyncRespo
     // XML elements that will be used
     private EditText autoCucumberEditText;
     private Button autoCucumberButton;
+    private Button clearButton;
     private CoordinatorLayout coordinatorLayout;
 
     private final CorrectAsyncTask placeholderCorrectAsyncTask = new CorrectAsyncTask();
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements CorrectAsyncRespo
         coordinatorLayout = (CoordinatorLayout)findViewById(R.id.coordinator_layout_main);
         autoCucumberEditText = (EditText)findViewById(R.id.autoCucumberEditText);
         autoCucumberButton = (Button)findViewById(R.id.autoCucumberButton);
+        clearButton = (Button)findViewById(R.id.clearButton);
 
         // Give the button an OnClickListener with an overridden onClick method
         autoCucumberButton.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +76,24 @@ public class MainActivity extends AppCompatActivity implements CorrectAsyncRespo
 
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        clearButton.setOnClickListener(
+            new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+
+                    // Reset the text field
+                    autoCucumberEditText.getText().clear();
+                    Snackbar.make(coordinatorLayout,
+                            getResources().getString(R.string.text_cleared_notification),
+                            Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                }
+
+            });
+
+                FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
