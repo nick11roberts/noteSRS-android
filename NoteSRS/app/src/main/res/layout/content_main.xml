@@ -17,24 +17,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/textInputLayout1">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
-            android:ems="10"
-            android:id="@+id/autoCucumberEditText"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toLeftOf="@+id/button"
-            android:layout_toStartOf="@+id/button"
-            android:nestedScrollingEnabled="true"
-            android:scrollIndicators="left"
-            android:autoText="true"
-            android:capitalize="sentences"
-            android:elegantTextHeight="true"
-            android:hint="@string/correct_text_hint" />
-
     </android.support.design.widget.TextInputLayout>
 
     <Button
@@ -51,7 +33,25 @@
         android:layout_height="wrap_content"
         android:text="@string/clear_button_text"
         android:id="@+id/clearButton"
-        android:layout_below="@+id/textInputLayout1"
-        android:layout_alignLeft="@+id/autoCucumberButton"
-        android:layout_alignStart="@+id/autoCucumberButton" />
+        android:layout_below="@+id/autoCucumberButton"
+        android:layout_toRightOf="@+id/autoCucumberEditText"
+        android:layout_alignRight="@+id/autoCucumberButton"
+        android:layout_alignEnd="@+id/autoCucumberButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+        android:ems="10"
+        android:id="@+id/autoCucumberEditText"
+        android:nestedScrollingEnabled="true"
+        android:scrollIndicators="left"
+        android:autoText="true"
+        android:capitalize="sentences"
+        android:elegantTextHeight="true"
+        android:hint="@string/correct_text_hint"
+        android:layout_toLeftOf="@+id/autoCucumberButton"
+        android:layout_alignTop="@+id/textInputLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
