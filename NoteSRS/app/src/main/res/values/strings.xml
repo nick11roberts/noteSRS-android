@@ -20,5 +20,7 @@
     <string name="text_corrected_notification">Your not serious text has been corrected</string>
     <string name="text_uploaded_notification_mid">-></string>
     <string name="text_cleared_notification">Your not serious text has been cleared</string>
+    <string name="text_cleared_undo">Undo</string>
+    <string name="text_cleared_undo_successful">Undo successful</string>
 
 </resources>

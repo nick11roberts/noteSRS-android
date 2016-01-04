@@ -82,12 +82,34 @@ public class MainActivity extends AppCompatActivity implements CorrectAsyncRespo
                 @Override
                 public void onClick(View view) {
 
+                    // In case the user wishes to restore the text
+                    final String savedText;
+
                     // Reset the text field
+                    savedText = autoCucumberEditText.getText().toString();
                     autoCucumberEditText.getText().clear();
-                    Snackbar.make(coordinatorLayout,
+                    Snackbar.make(
+                            coordinatorLayout,
                             getResources().getString(R.string.text_cleared_notification),
                             Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+                            .setAction(
+                                    getResources().getString(R.string.text_cleared_undo),
+                                    new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+
+                                            // Restore the text
+                                            autoCucumberEditText.setText(savedText);
+
+                                            // Notify the user
+                                            Snackbar.make(coordinatorLayout,
+                                                    getResources().getString(R.string.text_cleared_undo_successful),
+                                                    Snackbar.LENGTH_LONG)
+                                                    .setAction("", null).show();
+
+                                        }
+                                    }
+                            ).show();
 
                 }
 
@@ -101,10 +123,6 @@ public class MainActivity extends AppCompatActivity implements CorrectAsyncRespo
                 Intent myIntent = new Intent(MainActivity.this, UploadActivity.class);
                 MainActivity.this.startActivity(myIntent);
 
-                /*
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                        */
             }
         });
 
@@ -118,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements CorrectAsyncRespo
             Snackbar.make(coordinatorLayout,
                     getResources().getString(R.string.text_corrected_notification),
                     Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+                    .setAction("", null).show();
         }
     }
 

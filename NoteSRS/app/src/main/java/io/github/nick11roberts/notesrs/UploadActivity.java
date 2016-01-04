@@ -117,7 +117,7 @@ public class UploadActivity extends AppCompatActivity
                         + getResources().getString(R.string.text_uploaded_notification_mid)
                         + correction,
                 Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
+                .setAction("", null).show();
 
     }
 
