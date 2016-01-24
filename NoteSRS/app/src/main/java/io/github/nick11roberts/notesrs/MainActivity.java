@@ -83,9 +83,19 @@ public class MainActivity extends AppCompatActivity implements CorrectAsyncRespo
                     // In case the user wishes to restore the text
                     final String savedText;
 
+                    // Reset the EditText focus and hide the keyboard
+                    autoCucumberEditText.requestFocus();
+                    try  {
+                        InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                    } catch (Exception e) {
+
+                    }
+
                     // Reset the text field
                     savedText = autoCucumberEditText.getText().toString();
                     autoCucumberEditText.getText().clear();
+
                     Snackbar.make(
                             coordinatorLayout,
                             getResources().getString(R.string.text_cleared_notification),
